@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+
+            <TextView
+                android:id="@+id/txtv_order_id"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"
+                android:text="O5415454152"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/txtv_order_status"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txtv_order_price"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/txtv_order_id"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"
+                android:text="৳ 500"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#FFAB00"
+                />
+            <TextView
+                android:id="@+id/txtv_order_date"
+                android:layout_alignBaseline="@id/txtv_order_price"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                android:text="30 Jan, 2021 06:36 PM"
+                android:textSize="12sp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relative_layout_details"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/relative_layout_1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtv_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Ma Medical Hall and Pharmacy"/>
+
+            <TextView
+                android:id="@+id/txtv_payment_method"
+                android:layout_below="@+id/txtv_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Payment: Cash On Delivery"
+                android:padding="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/txtv_requirement"
+                android:layout_below="@+id/txtv_payment_method"
+                android:text="Requirement: Nothing"
+                android:padding="3dp"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/txtv_requirement"
+                android:id="@+id/recy_order_details"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/iv_order_items"/>
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

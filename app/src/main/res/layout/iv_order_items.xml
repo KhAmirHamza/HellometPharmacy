@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="10dp">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:background="#707070">
+
+     <RelativeLayout
+         android:padding="5dp"
+         android:background="@color/white"
+         android:layout_marginLeft="2dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+         <TextView
+             android:id="@+id/txtv_medicine_name"
+             android:padding="5dp"
+             android:text="Paracetamol Tablet"
+             android:textSize="16sp"
+             android:textStyle="bold"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"/>
+
+         <TextView
+             android:id="@+id/txtv_medicine_features"
+             android:layout_below="@+id/txtv_medicine_name"
+             android:textSize="12sp"
+             android:textColor="#252B60"
+             android:padding="5dp"
+             android:text="Peracetamol and Cafine"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"/>
+
+         <TextView
+             android:id="@+id/txtv_medicine_sub_total"
+             android:layout_below="@+id/txtv_medicine_features"
+             android:textColor="#00B54B"
+             android:textSize="14sp"
+             android:text="2.5 Tk || 5 Pcs || SubTotal: 12.5 Tk"
+             android:textStyle="bold"
+             android:padding="5dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"/>
+
+
+     </RelativeLayout>
+ </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

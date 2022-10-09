@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.ProfileActivity">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/profile_appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/profile_toolbar"
+                    style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/bg_500"
+                    app:title="Profile" >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Profile"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            />
+
+                        <Switch
+                            android:id="@+id/switch_status"
+                            android:text="Status  "
+                            android:enabled="false"
+                            android:textColor="@color/white"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:ignore="UseSwitchCompatOrMaterialXml" />
+                    </RelativeLayout>
+                </com.google.android.material.appbar.MaterialToolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutProfile"
+                android:layout_below="@id/profile_appbar"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/imgv_profile_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    app:civ_border_color="#8D9694"
+            />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardview_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgv_profile_image"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/txtv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_outline_name_24"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold"
+                            android:drawablePadding="5dp"
+                            android:text="..."
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtv_email"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtv_name"
+                            android:drawableLeft="@drawable/ic_email_black_24dp"
+                            android:layout_margin="5dp"
+                            android:drawablePadding="5dp"
+                            android:text="..."
+                            android:textSize="14sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/txtv_phone_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtv_email"
+                            android:drawableLeft="@drawable/ic_call_black_24dp"
+                            android:layout_margin="5dp"
+                            android:drawablePadding="5dp"
+                            android:text="..."
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/txtv_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgv_profile_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="All Orders"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy_all_order"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:nestedScrollingEnabled="false"
+                android:layout_below="@id/layoutProfile"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/iv_order_list" />
+        </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

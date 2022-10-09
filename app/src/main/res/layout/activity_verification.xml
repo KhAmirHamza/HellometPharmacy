@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.VerificationActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_verification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:titleTextColor="@color/white"
+            app:title="Sign Up">
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_below="@+id/appbar_verification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="50dp">
+            <ImageView
+                android:id="@+id/imgv_otp_icon"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/otp_verification"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"/>
+
+            <TextView
+                android:layout_marginTop="50dp"
+                android:id="@+id/txtv1"
+                android:layout_below="@+id/imgv_otp_icon"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verify Mobile Number using OTP"/>
+
+            <RelativeLayout
+                android:id="@+id/lay_4"
+                android:layout_below="@+id/txtv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/lay_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <LinearLayout
+                        android:id="@+id/lay_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txtv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="We sent OTP to "
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:gravity="center_horizontal" />
+
+                        <TextView
+                            android:id="@+id/txtv3"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:text="+8801705187083"
+                            android:textAlignment="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/txtv4"
+                        android:layout_below="@+id/lay_5"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="16sp"
+                        android:text="Check your mobile"
+                        android:textAlignment="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:visibility="gone"
+                    android:id="@+id/btn_resend_code"
+                    android:layout_marginTop="20dp"
+                    android:text="Resend Code"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    style="@style/Widget.MaterialComponents.Button"
+                    />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/lay_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lay_4"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="50dp">
+                <TextView
+                    android:id="@+id/txtv5"
+                    android:textSize="16sp"
+                    android:text="Enter the OTP"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" />
+                <!--  <TextView
+                      android:id="@+id/txtv6"
+                      android:textSize="16sp"
+                      android:text="+8801705187083"
+                      android:textColor="@android:color/black"
+                      android:textAlignment="center"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"/>-->
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lay_3"
+                android:gravity="center">
+
+               <!-- <com.goodiebag.pinview.Pinview
+                    android:id="@+id/pinview"
+                    app:pinWidth="40dp"
+                    app:pinHeight="40dp"
+                    app:pinLength="6"
+                    app:cursorVisible="true"
+                    app:forceKeyboard="false"
+                    app:hint="0"
+                    app:inputType="number"
+                    app:password="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />-->
+                <com.chaos.view.PinView
+                    android:id="@+id/pinview"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    style="@style/PinWidget.PinView"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="true"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:cursorWidth="2dp"
+                    app:hideLineWhenFilled="true"
+                    app:itemCount="6"
+                    app:itemHeight="48dp"
+                    app:itemRadius="4dp"
+                    app:itemSpacing="0dp"
+                    app:itemWidth="48dp"
+                    app:lineWidth="2dp"
+                    app:viewType="rectangle" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_verify_number"
+                android:layout_marginTop="50dp"
+                android:text="Verify Number"
+                android:textAllCaps="false"
+                android:layout_below="@+id/lay_2"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:textSize="16sp"
+
+                />
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lay_4"
+                android:layout_marginTop="-10dp"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

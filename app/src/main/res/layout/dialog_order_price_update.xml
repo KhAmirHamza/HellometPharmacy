@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp"
+    android:layout_gravity="center"
+    android:layout_centerInParent="true"
+    >
+
+    <TextView
+        android:id="@+id/txtv_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Update Order Price"/>
+
+    <TextView
+        android:id="@+id/txtv_dialog_description"
+        android:layout_below="@+id/txtv_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Enter the actual price of medicines\nof the prescription."/>
+
+    <TextView
+        android:id="@+id/txtv_1"
+        android:layout_below="@+id/txtv_dialog_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Tk- "/>
+
+    <EditText
+        android:id="@+id/edt_price"
+        android:layout_below="@id/txtv_dialog_description"
+        android:layout_toRightOf="@id/txtv_1"
+        android:minWidth="100dp"
+        android:hint="000"
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        android:inputType="number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        android:layout_below="@id/edt_price"
+        android:layout_toLeftOf="@id/btn_update_price"
+        android:layout_marginRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:textColor="@color/black"
+        android:text="Cancel"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_update_price"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/edt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:text="Update"/>
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.HellometPharmacy" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!--<item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:statusBarColor" tools:targetApi="m">@color/white</item>-->
+        <!--    &lt;!&ndash; Primary brand color. &ndash;&gt;
+            <item name="colorPrimary">@color/purple_500</item>
+            <item name="colorPrimaryVariant">@color/purple_700</item>
+            <item name="colorOnPrimary">@color/white</item>
+            &lt;!&ndash; Secondary brand color. &ndash;&gt;
+            <item name="colorSecondary">@color/teal_200</item>
+            <item name="colorSecondaryVariant">@color/teal_700</item>
+            <item name="colorOnSecondary">@color/black</item>
+            &lt;!&ndash; Status bar color. &ndash;&gt;
+            -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/bg_500</item>
+        <item name="colorPrimaryVariant">@color/bg_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="edittext" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="tabLayout" parent="Widget.Design.TabLayout">
+        <item name="textAllCaps">false</item>
+    </style>
+</resources>

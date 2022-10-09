@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="100dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            android:id="@+id/txtv_message"
+            android:layout_width="match_parent"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:background="@color/bg_700"
+            android:textColor="@color/white"
+            android:text="Hi, how are you?"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</RelativeLayout>
